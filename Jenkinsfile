@@ -44,5 +44,11 @@ pipeline {
                 
             }
             }
+			stage('code deploy') {
+            steps {
+			sh 'mvn deploy'
+                
+            }
+            }
          }
       }
