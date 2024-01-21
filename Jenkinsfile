@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('code clone') {
             steps {
-			git branch: 'main', credentialsId: 'Git', url: 'https://github.com/suryavinay4435/jenkins1.git'
+			git branch: 'main', credentialsId: 'Git', url: 'https://github.com/suryavinay4435/jenkinsapr.git'
 			
                 
             }
