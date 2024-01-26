@@ -9,44 +9,44 @@ pipeline {
     stages {
         stage('code clone') {
             steps {
-			git branch: 'main', credentialsId: 'Git', url: 'https://github.com/suryavinay4435/jenkinsapr.git'
+			  git branch: 'main', credentialsId: 'Git', url: 'https://github.com/suryavinay4435/jenkinsapr.git'
 			
                 
             }
             }
-			stage('code clean') {
-            steps {
-			sh 'mvn clean'
+		stage('code clean') {
+			steps {
+			  sh 'mvn clean'
                 
             }
             }
-			stage('code validate') {
+		stage('code validate') {
             steps {
-			sh 'mvn validate'
+			  sh 'mvn validate'
                 
             }
             }
-			stage('code compile') {
+		stage('code compile') {
             steps {
-			sh 'mvn compile'
+			  sh 'mvn compile'
                 
             }
             }
-			stage('code test') {
+		stage('code test') {
             steps {
-			sh 'mvn test'
+			  sh 'mvn test'
                 
             }
             }
-			stage('code package') {
+		stage('code package') {
             steps {
-			sh 'mvn package'
+			  sh 'mvn package'
                 
             }
             }
-			stage('code deploy') {
+		stage('code deploy') {
             steps {
-			sh 'mvn deploy'
+			  sh 'mvn deploy'
                 
             }
             }
