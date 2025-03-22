@@ -39,8 +39,21 @@
     </dependencies>
 
     <build>
+        <!-- Define source directory -->
+        <sourceDirectory>src/main/java</sourceDirectory>
+
+        <!-- Resources configuration -->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*</include> <!-- Include all resources -->
+                </includes>
+            </resource>
+        </resources>
+
         <plugins>
-            <!-- Jetty Plugin -->
+            <!-- Jetty Plugin (optional) -->
             <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
@@ -55,6 +68,14 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.1</version>
+                <configuration>
+                    <!-- Specify the web resources if needed -->
+                    <webResources>
+                        <resource>
+                            <directory>src/main/webapp</directory> <!-- Adjust this path if necessary -->
+                        </resource>
+                    </webResources>
+                </configuration>
             </plugin>
         </plugins>
     </build>
